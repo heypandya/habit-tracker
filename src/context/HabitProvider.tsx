@@ -39,8 +39,10 @@ export function HabitProvider({ children }: HabitProviderProps) {
   }
 
   return (
-    <HabitContext value={{ habits, addHabit, toggleHabit, deleteHabit }}>
+    <HabitContext.Provider
+      value={{ habits, addHabit, toggleHabit, deleteHabit }}
+    >
       {children}
-    </HabitContext>
+    </HabitContext.Provider>
   );
 }
